@@ -11,5 +11,7 @@ public class Organism {
         this.size = size;
         this.speed = speed;
         this.foodRequired = foodRequired;
+        this.x = x;
+        this.y = y;
     }
 }
