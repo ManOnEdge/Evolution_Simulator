@@ -20,7 +20,8 @@ public class Controller {
     public TextField EnvSize;
 
 
-    public void pressRun(){
+    public void pressRun() //Activates the simulator
+    {
 
     }
 }
