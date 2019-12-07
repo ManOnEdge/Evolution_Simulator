@@ -1,4 +1,4 @@
-package sample;
+ package sample;
 
 public class Organism {
     public int size;
@@ -13,5 +13,10 @@ public class Organism {
         this.foodRequired = foodRequired;
         this.x = x;
         this.y = y;
+    }
+
+    public void move()
+    {
+
     }
 }
