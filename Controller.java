@@ -1,10 +1,9 @@
 package sample;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
-        import javafx.scene.control.Button;
-        import javafx.scene.control.TextField;
-
-public class Controller {
+public class SampleController {
     public Button butRun;
     public TextField OrgNo;
     public TextField OrgSpeed;
@@ -22,8 +21,12 @@ public class Controller {
 
     public void pressRun() //Activates the simulator
     {
-        String OrgNoValue = OrgNo.getText ();
+        /*String OrgNoValue = OrgNo.getText ();
         String OrgSpeedValue = OrgSpeed.getText();
-        System.out.println (OrgSpeedValue);
+        System.out.println (OrgSpeedValue);*/
+        butRun.setOnAction (event -> {
+
+        });
+
     }
 }
