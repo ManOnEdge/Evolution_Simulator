@@ -1,4 +1,4 @@
- package sample;
+package sample;
 
 public class Organism {
     public int size;
@@ -7,7 +7,7 @@ public class Organism {
     public int x;
     public int y;
 
-    public Organism(int size, int speed,int foodRequired, int x, int y){
+    public Organism(int size, int speed, int foodRequired, int x, int y) {
         this.size = size;
         this.speed = speed;
         this.foodRequired = foodRequired;
@@ -15,8 +15,7 @@ public class Organism {
         this.y = y;
     }
 
-    public void move()
-    {
+    public void move() {
 
     }
 }
