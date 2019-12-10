@@ -4,6 +4,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class CanvasController {
@@ -13,29 +14,29 @@ public class CanvasController {
     public Environment env;
     public Button butStop;
 
-
-    public void Draw() {
+    public void draw(ArrayList<Organism> population) {
 
         GraphicsContext gc = Plane.getGraphicsContext2D ();
         Random rnd = new Random ();
 
-        gc.fillOval (rnd.nextInt (500), rnd.nextInt (500), 5, 5);
-        //gc.strokeOval (rnd.nextInt (500), rnd.nextInt (500), 5, 5);
-
+        gc.clearRect (0, 0, Main.Width, Main.Height);
+        for (Organism organism : population) {
+            gc.strokeOval (organism.x, organism.y, organism.size, organism.size);
+        }
     }
 
     public void pressDraw() {
-        Draw ();
+        //draw ();
 
+        //env.startEnv ();
         env.startEnv ();
-
         //start thread for environment
 
-        Runnable envThread = () -> {
+        /*Runnable envThread = () -> {
             while (env.isRunning ()) {
                 try {
                     env.tick ();
-                    Draw ();
+                    draw ();
                     Thread.sleep (100);
                 } catch (InterruptedException e) {
                     System.out.println (e);
@@ -43,7 +44,7 @@ public class CanvasController {
             }
 
         };
-        new Thread (envThread).start ();
+        new Thread (envThread).start ();*/
     }
 
     public void pressStop() {
@@ -51,7 +52,7 @@ public class CanvasController {
     }
 
     public void initialize() {
-        env = new Environment (20, 500, 500);
-
+        env = new Environment (3, Main.Width, Main.Height, this);
+        env.tick ();
     }
 }
