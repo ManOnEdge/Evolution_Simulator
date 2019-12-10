@@ -11,9 +11,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Main extends Application {
-    public static final int Width = 500;
-    public static final int Height = 500;
-
+    public static final int Width = 646;
+    public static final int Height = 439;
+    public static final int butHeight = 26;
     @Override
     public void start(Stage primaryStage) throws Exception {
 
@@ -27,7 +27,7 @@ public class Main extends Application {
         butRun.setOnAction (event -> {
             try {
                 AnchorPane canvasRoot = FXMLLoader.load (getClass ().getResource ("canvas.fxml"));
-                Scene scene = new Scene (canvasRoot, Width, Height);
+                Scene scene = new Scene (canvasRoot, Width, Height+butHeight);
                 primaryStage.setScene (scene);
                 primaryStage.show ();
 
