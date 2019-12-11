@@ -1,13 +1,10 @@
 package sample;
 
 public class FoodItem {
-    int startingFoodNumber;
     int x;
     int y;
 
-    public FoodItem(int startingFoodNumber, int x, int y)
-    {
-        this.startingFoodNumber = startingFoodNumber;
+    public FoodItem(int x, int y) {
         this.x = x;
         this.y = y;
     }
