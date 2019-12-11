@@ -1,7 +1,7 @@
 package sample;
 
-        import javafx.scene.control.Button;
-        import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class SampleController {
     public Button butRun;
@@ -21,12 +21,10 @@ public class SampleController {
 
     public void pressRun() //Activates the simulator
     {
-        /*String OrgNoValue = OrgNo.getText ();
-        String OrgSpeedValue = OrgSpeed.getText();
-        System.out.println (OrgSpeedValue);*/
-        butRun.setOnAction (event -> {
-
-        });
+        int OrgNoValue = Integer.valueOf (OrgNo.getText ());
+        int OrgSizeValue = Integer.valueOf (OrgSize.getText ());
+        Config config = new Config (OrgNoValue,OrgSizeValue);
 
     }
+
 }
